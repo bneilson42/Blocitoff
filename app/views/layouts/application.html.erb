@@ -11,6 +11,9 @@
   <ul class="nav nav-tabs">
     <li><%= link_to "Blocitoff", welcome_index_path %></li>
     <li><%= link_to "About", welcome_about_path %></li>
+    <% if current_user %>
+    <li><%= link_to "Todo List", todos_path %></li>
+    <% end %>
 
     <div class="pull-right user-info">
       <% if current_user %>
