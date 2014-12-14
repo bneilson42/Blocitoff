@@ -1,5 +1,7 @@
 class TodosController < ApplicationController
   def index
+    @todos = current_user.todos
+    #authorize @todos
   end
 
   def show
@@ -8,7 +10,7 @@ class TodosController < ApplicationController
 
   def new
     @todo = Todo.new
-    #authorize @todo
+    #authorize @todos
   end
 
   private
