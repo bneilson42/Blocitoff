@@ -4,7 +4,7 @@
   <table class= "table table-hover" align="center">
     <thead>
       <tr>
-        <th class="col-sm-6 text-center"> Item <span></span></th>
+        <th class="col-sm-4 text-center"> Item <span></span></th>
         <th class="col-sm-1 text-center"> Days remaining <span></span></th>
         <th class="col-sm-1 text-center"> Complete <span></span></th>
         <tr/>
@@ -12,9 +12,9 @@
       <% @todos.each do |todo| %>
       <tbody>
         <tr>
-          <td></td>
-          <td class= "text-center"></td>
-          <td class="text-center"></td>
+          <td><%= todo.description %></td>
+          <td class= "text-center"><%= todo.days_left %></td>
+          <td class="text-center"><%= link_to "", todo, method: :delete, class: 'glyphicon glyphicon-ok' %></td>
         </tr>
       </tbody>
       <% end %>
