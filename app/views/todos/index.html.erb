@@ -1,6 +1,23 @@
 <% if current_user.present? %>
 <h1 class="todo">My Todo List</h1>
 <% end %>
-<div class="text-center">
+<div class="jumbotron">
+  <table class= "table table-hover" align="center">
+    <thead>
+      <tr>
+        <th class="col-sm-6 text-center"> Item <span></span></th>
+        <th class="col-sm-1 text-center"> Days remaining <span></span></th>
+        <th class="col-sm-1 text-center"> Complete <span></span></th>
+        <tr/>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td></td>
+          <td class= "text-center"></td>
+          <td class="text-center"></td>
+        </tr>
+      </tbody>
+    </table>
   <%= link_to "Create New Item", new_todo_path, class:'btn btn-primary btn-large' %>
 </div>

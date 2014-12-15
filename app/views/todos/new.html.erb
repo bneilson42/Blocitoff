@@ -3,7 +3,7 @@
   <div class="col-md-3">
     <%= form_for @todo do |f| %>
     <div class="form-group">
-      <%= f.text_field :description, class: 'form-control',placeholder: 'Description' %>
+      <%= f.text_field :title, class: 'form-control',placeholder: 'Item' %>
     </div>
     <%= f.submit 'Save', class: 'btn btn-info' %>
     <% end %>
