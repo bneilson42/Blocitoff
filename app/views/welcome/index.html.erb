@@ -1,5 +1,6 @@
+<center>
 <% if current_user %>
-<div class="jumbotron">
+<div class="jumbotron", align=center>
  <h1>Blocitoff</h1>
  <p>Create a self destructing to-do list.</p>
  <%= link_to "Todo List", todos_path, class:'btn btn-primary btn-large' %>
@@ -12,3 +13,4 @@
   <%= link_to "Sign In", new_user_session_path, class:'btn btn-primary btn-large' %>
 </div>
 <% end %>
+</center>
