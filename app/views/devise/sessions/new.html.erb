@@ -1,28 +1,38 @@
-<h2>Sign in</h2>
+<div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="teal-text">SIGN IN</h2>
+      </div>
 
-<div class="row">
-  <div class="col-md-8">
-    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-    <%= devise_error_messages! %>
-    <div class="form-group">
-      <%= f.label :email %>
-      <%= f.email_field :email, autofocus: true, class: 'form-control', placeholder: "Enter email" %>
-    </div>
-    <div class="form-group">
-      <%= f.label :password %>
-      <%= f.password_field :password, class: 'form-control', placeholder: "Enter password" %>
-    </div>
-    <div class="form-group">
-      <% if devise_mapping.rememberable? %>
-      <%= f.label :remember_me, class: 'checkbox' do %>
-      <%= f.check_box :remember_me %> Remember me
+      <div class="modal-body">
+         <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+         <%= devise_error_messages! %>
+      <div class='row'>
+      <div class="form-group input-lg">
+         <%= f.email_field :email, autofocus: true, class: 'form-control', placeholder: "Email" %>
+      </div>
+      <div class="form-group input-lg">
+         <%= f.password_field :password, class: 'form-control', placeholder: "Password" %>
+      </div>
+
+
+        <div class='col m7 s12 push-m5'>
+           <% if devise_mapping.rememberable? %>
+        <div class="input-field">
+           <%= f.check_box :remember_me, class: 'filled-in' %>
+           <%= f.label :remember_me %>
+        </div>
+           <% end %>
+      </div>
+
+      <div class='col m5 s12 pull-m7 input-field'>
+          <%= f.submit "Sign in", class: 'btn btn-success' %>
+              </div>
+            </div>
+      <div class="form-group input-lg">
+        <%= render "devise/shared/links" %>
+      </div>
       <% end %>
-      <% end %>
-      <%= f.submit "Sign in", class: 'btn btn-success' %>
     </div>
-    <div class="form-group">
-      <%= render "devise/shared/links" %>
-    </div>
-    <% end %>
   </div>
 </div>
