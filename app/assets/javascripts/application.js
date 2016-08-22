@@ -16,3 +16,9 @@
 //= require bootstrap
 //= require materialize-sprockets
 //= require_tree .
+
+$(document).ready(function(){
+  setTimeout(function(){
+    $('.alert').remove();
+  }, 2000);
+})
