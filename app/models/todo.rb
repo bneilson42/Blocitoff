@@ -5,6 +5,6 @@ class Todo < ActiveRecord::Base
   validates :description, length: { minimum: 5 }, presence: true
 
   def days_left
-    (created_at.to_date - (DateTime.now.to_date - 6.days)).to_i
+    6 - (DateTime.now.to_date - created_at.to_date).to_i
   end
 end
